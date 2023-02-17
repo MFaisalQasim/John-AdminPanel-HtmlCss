@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Dashboard</title>
+    <!-- //// -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- /////////////// -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- /////////////////////////// -->
+    <script src="https://cdn2.hubspot.net/hubfs/476360/Chart.js"></script>
+    <script src="https://cdn2.hubspot.net/hubfs/476360/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default no-margin flex-nowrap">
+        <!-- style="flex-wrap: nowrap;" -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+        </div>
+        <!-- navbar-header-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="header d-flex  justify-content-between">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span
+                                class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>
+                <div>
+                    <button class="btn">
+                        <!-- <i class="fa fa-home"></i> -->
+                        <img src="./assets/icons/alert.png" alt="">
+                        $0.00</button>
+                    <button class="btn">
+                        <!-- <i class="fa fa-bars"></i> -->
+                        <img src="./assets/icons/coins.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <!-- <i class="fa fa-trash"></i> -->
+                        <img src="./assets/icons/profile.png" alt="">
+                        Admin</button>
+                </div>
+            </div>
+        </div>
+        <!-- bs-example-navbar-collapse-1 -->
+    </nav>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <!-- <div class="navbar-header fixed-brand"> -->
+            <a class="navbar-brand" href="#">
+                <!-- <i class="fa fa-rocket fa-4"></i> -->
+                <img src="./assets/images/logo.png" alt="" srcset=""></a>
+            <!-- </div> -->
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                <li>
+                    <a href="Statistics.html">
+                        <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Statistics.png" alt="">
+                        </span>Statistics</a>
+                </li>
+                <li>
+                    <a href="Users.html"> <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Users.png" alt=""></span>Users</a>
+                </li>
+                <li class="active">
+                    <a href="GlobalReports.html">
+                        <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Global Reports.png" alt="">
+                        </span>
+                        Global Reports
+                    </a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li>
+                            <a href="AgentReport.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/Agent Report.png" alt=""></span>Agent Report</a>
+                        </li>
+                        <li><a href="PlayerReport.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/Player Report.png" alt=""></span>Player Report</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="FileReports.html"><span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/File Reports.png" alt=""></span>File Reports</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="ChargesAndWithdrawals.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/ChargesAndWithdrawals.png" alt=""></span>Charges And
+                                Withdrawals</a></li>
+                        <li>
+                            <a href="PlayerHistory.html"><span class="fa-stack fa-lg pull-left"><img
+                                        src="./assets/icons/Player History.png" alt=""></span>Player History</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="GameReport.html"><span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Game Reports.png" alt=""></span>Game Reports</a>
+                </li>
+                <!-- <li>
+                    <a href=".html"><span class="fa-stack fa-lg pull-left"><i
+                                class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+                </li>
+                <li>
+                    <a href=".html"><span class="fa-stack fa-lg pull-left"><i
+                                class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 score_box">
+                    <div class="blue_stripe">
+                        <p class="title_stripe">Fast Charge</p>
+                    </div>
+                    <div class="plus_btn reading_box first_box">
+                        <div class="center_center">
+                            <button class="btn p-0"><span>New Agent</span>
+                                <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                            </button>
+                            <button class="btn p-0"><span>New Player</span>
+                                <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                            </button>
+                        </div>
+                        <div class="center_center">
+                            <div class="input_div">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><img
+                                                src="./assets/icons/profile.png" alt=""></span>
+                                        <input type="text" class="form-control" placeholder="Username"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn  plus_green_button"> <i class="fa fa-plus"></i></button>
+                            <button class="btn mins_red_button"> <i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 score_box">
+                    <div class="yellow_stripe">
+                        <p class="title_stripe">Net Income</p>
+                    </div>
+                    <!-- Current Month: 6,297 -->
+                    <div class=" reading_box second_box">
+                        <div class="btn p-0 current_month"><span>Current Month:</span>
+                            <div class="img">6,297</div>
+                        </div>
+                        <div class="btn p-0 previous_month"><span>Previous Month:</span>
+                            <div class="img">16,035</div>
+                        </div>
+                        <div class="center_center">
+                            <button class="btn p-0 red_button"><span>-4.39%</span>
+                                <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                            </button>
+                            <button class="btn p-0 green_button"><span>+2.90%</span>
+                                <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 score_box">
+                    <div class="blue_stripe">
+                        <p class="title_stripe">Net win Monthly</p>
+                    </div>
+                    <div class="plus_btn reading_box first_box">
+                        <div class="center_center">
+                            <canvas id="canvas" style="display: block; width: 300px;height:200px;" width="800"
+                                height="500" class="chartjs-render-monitor"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-8  graph_box">
+                    <div class="blue_stripe">
+                        <p class="title_stripe">Daily Netwin</p>
+                    </div>
+                    <div class="plus_btn reading_box first_box">
+                        <div class="center_center">
+                                <div id="chart1" style="width: 800px;height:500px;"></div>
+                                <!-- <div id="chart2" style="width: 600px;height:300px;"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4  graph_box">
+                    <div class="yellow_stripe yellow_stripe_large">
+                        <p class="title_stripe">Top Agents of <br> the month</p>
+                    </div>
+                    <div class="plus_btn reading_box first_box">
+                        <div class="center_center">
+                            <canvas id="myChart" style="width:584px;max-width:584px"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $("#menu-toggle-2").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled-2");
+            $('#menu ul').hide();
+        });
+
+        function initMenu() {
+            $('#menu ul').hide();
+            $('#menu ul').children('.current').parent().show();
+            //$('#menu ul:first').show();
+            $('#menu li a').click(
+                function () {
+                    var checkElement = $(this).next();
+                    if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                        return false;
+                    }
+                    if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                        $('#menu ul:visible').slideUp('normal');
+                        checkElement.slideDown('normal');
+                        return false;
+                    }
+                }
+            );
+        }
+        $(document).ready(function () {
+            initMenu();
+        });
+    </script>
+    <!-- /////////////////////////////////// -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script>
+        var xValues = ["Pirry 2022", "July"];
+        var yValues = [3, 100];
+        var barColors = [
+            "#E8C3B9",
+            "#402540",
+        ];
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "World Wide Wine Production 2018"
+                }
+            }
+        });
+    </script>
+
+    <!-- ////////////////////////////////////////////// -->
+
+    <script>
+        const chart1 = echarts.init(document.getElementById('chart1'));
+        const option1 = {
+            title: {
+                // text: 'Chart 1',
+                left: 'center',
+            },
+            grid: {
+                show: true,
+                top: 10,
+                backgroundColor: 'transparent',
+            },
+            // tooltip: {
+            //     trigger: 'axis'
+            // },
+            legend: {
+                data: ['Filleds', 'Filled', 'Dashes'],
+                bottom: 0,
+            },
+            xAxis: {
+                data: ['Jannuary', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: 'Filleds',
+                    type: 'line',
+                    data: [-200, -2, -3, 1000.1, 2000.2, 3000.3, 4000.4, 5000.5, 6000.6, 12000]
+                },
+                // {
+                //     name: 'Filled',
+                //     type: 'line',
+                //     data: [20000, 10001, 10000, 9000, 8000, 8000, 000]
+                // },
+                // {
+                //     name: 'Dashes',
+                //     type: 'line',
+                //     data: [21000, 1110, 11000, 190, 180, 180, 1000]
+                // }
+            ]
+        };
+        chart1.setOption(option1);
+        chart1.group = 'group1';
+        echarts.connect('group1');
+    </script>
+
+    <script>
+        var config = {
+            type: 'line',
+            data: {
+                labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+                datasets: [
+                    {
+                    label: 'APAC RE Index',
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    fill: false,
+                    data: [
+                        10,
+                        20,
+                        30,
+                        40,
+                        100,
+                        50,
+                        150
+                        /*randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()*/
+                    ],
+                }, 
+                {
+                    label: 'APAC PME',
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    fill: false,
+                    data: [
+                        0,
+                        30,
+                        10,
+                        50,
+                        10,
+                        20,
+                        30
+                    ],
+
+                }, 
+                {
+                    label: 'APAC PME',
+                    backgroundColor: window.chartColors.yellow,
+                    borderColor: window.chartColors.yellow,
+                    fill: false,
+                    data: [
+                        9,
+                        39,
+                        19,
+                        59,
+                        19,
+                        29,
+                        30
+                    ],
+
+                }
+            ]
+            },
+            options: {
+                responsive: true,
+                // title: {
+                //     display: true,
+                //     text: 'Chart.js Line Chart - Logarithmic'
+                // },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        },
+
+                    }],
+                    yAxes: [{
+                        display: true,
+                        //type: 'logarithmic',
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Index Returns'
+                        },
+                        ticks: {
+                            min: 0,
+                            max: 50,
+
+                            // forces step size to be 5 units
+                            stepSize: 50
+                        }
+                    }]
+                }
+            }
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+        };
+
+        document.getElementById('randomizeData').addEventListener('click', function () {
+            config.data.datasets.forEach(function (dataset) {
+                dataset.data = dataset.data.map(function () {
+                    return randomScalingFactor();
+                });
+            });
+            window.myLine.update();
+        });
+    </script>
+</body>
+
+</html>

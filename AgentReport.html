@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Agent Report</title>
+    <!-- //// -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- /////////////// -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- //////////// -->
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default no-margin flex-nowrap">
+        <!-- style="flex-wrap: nowrap;" -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+        </div>
+        <!-- navbar-header-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="header d-flex" style="
+            justify-content: space-between;">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span
+                                class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>
+                <div>
+                    <button class="btn">
+                        <!-- <i class="fa fa-home"></i> -->
+                        <img src="./assets/icons/alert.png" alt="">
+                        $0.00</button>
+                    <button class="btn">
+                        <!-- <i class="fa fa-bars"></i> -->
+                        <img src="./assets/icons/coins.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <!-- <i class="fa fa-trash"></i> -->
+                        <img src="./assets/icons/profile.png" alt="">
+                        Admin</button>
+                </div>
+            </div>
+        </div>
+        <!-- bs-example-navbar-collapse-1 -->
+    </nav>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <!-- <div class="navbar-header fixed-brand"> -->
+            <a class="navbar-brand" href="#">
+                <!-- <i class="fa fa-rocket fa-4"></i> -->
+                <img src="./assets/images/logo.png" alt="" srcset=""></a>
+            <!-- </div> -->
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                <li>
+                    <a href="Statistics.html">
+                        <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Statistics.png" alt="">
+                        </span>Statistics</a>
+                </li>
+                <li>
+                    <a href="Users.html"> <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Users.png" alt=""></span>Users</a>
+                </li>
+                <li class="active">
+                    <a href="GlobalReports.html">
+                        <span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Global Reports.png" alt="">
+                        </span>
+                        Global Reports
+                    </a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li>
+                            <a href="AgentReport.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/Agent Report.png" alt=""></span>Agent Report</a>
+                        </li>
+                        <li><a href="PlayerReport.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/Player Report.png" alt=""></span>Player Report</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="FileReports.html"><span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/File Reports.png" alt=""></span>FileReports</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="ChargesAndWithdrawals.html"><span class="fa-stack fa-lg pull-left">
+                                    <img src="./assets/icons/ChargesAndWithdrawals.png" alt=""></span>Charges And
+                                Withdrawals</a></li>
+                        <li>
+                            <a href="PlayerHistory.html"><span class="fa-stack fa-lg pull-left"><img
+                                        src="./assets/icons/Player History.png" alt=""></span>Player History</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="GameReport.html"><span class="fa-stack fa-lg pull-left">
+                            <img src="./assets/icons/Game Reports.png" alt=""></span>GameReports</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class=" plus_btn center_center">
+                            <!-- style="
+                        justify-content: space-between;" -->
+                            <h1>Agent Report</h1>
+                            <div class="d-flex
+                            justify-content-between
+                            align-items-center">
+                                <button class="btn p-0"><span>New Agent</span>
+                                    <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                                </button>
+                                <button class="btn p-0"><span>New Player</span>
+                                    <div class="img"><img src="./assets/icons/add.png" alt=""></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .dataTables_info {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0px !important;
+                            background: #0F0F37;
+                            border: 2px solid #16163F;
+                            border-radius: 10px;
+                            height: 54px;
+                            width: 242px;
+                        }
+
+                        .dataTables_paginate .paginate_button {
+                            display: inline-flex !important;
+                            justify-content: center !important;
+                            align-items: center !important;
+                            padding: 0px !important;
+                            height: 54px !important;
+                            width: 133px !important;
+                            left: 1154px !important;
+                            top: 503px !important;
+                            border-radius: 10px !important;
+                            background: #0F0F37 !important;
+                            border: 2px solid #16163F !important;
+                            border-radius: 10px !important;
+                        }
+
+                        .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+                        .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+                        .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+
+                            color: white !important;
+                        }
+
+                        table {
+                            background: #0F0F37;
+                            border: 2px solid #16163F !important;
+                            border-radius: 20px !important;
+                        }
+
+                        thead {
+                            height: 56px;
+                        }
+
+                        tbody {
+                            background: linear-gradient(0deg, #060633, #060633),
+                                linear-gradient(0deg, #16163F, #16163F);
+                            border: 2px solid #16163F !important;
+                            height: 84px;
+                            width: 1033px;
+                        }
+
+                        /* tr{
+                            border-radius: 30px!important;
+                        } */
+                        td {
+                            /* border-radius: 30px!important; */
+                            border-bottom-left-radius: 20px !important;
+                            border-bottom-right-radius: 20px !important;
+                        }
+
+                        table.dataTable thead th {
+                            text-align: center;
+                        }
+
+                        table.dataTable thead th {
+                            /* display: inline-grid !important;
+                            justify-items: center !important;
+                            align-items: center !important;
+                            padding: 10px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.3); */
+                        }
+                    </style>
+
+                    <div class="col-lg-8">
+                        <!-- <h1>Everything Goes here </h1> -->
+                        <!-- <div class="table_head">
+                            <nav class="nav nav-pills nav-justified">
+                                <a class="nav-link active" >Everyone</a>
+                                <a class="nav-link" >Much longer nav link</a>
+                                <a class="nav-link" >Link</a>
+                                <a class="nav-link ">Disabled</a>
+                              </nav>
+                              <div id="example_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example"></label></div>
+                            </div> -->
+                        <table id="example" class="display nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-4 ca">
+                        <div class="main">
+                            <ul id="cbp-ntaccordion" class="cbp-ntaccordion">
+                                <li>
+                                    <h3 class="cbp-nttrigger">Romanic1</h3>
+                                    <div class="cbp-ntcontent">
+                                        <ul class="cbp-ntsubaccordion">
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <ul class="cbp-ntsubaccordion">
+                                                <li class="cbp-ntopen">
+                                                    <h4 class="cbp-nttrigger">Freind 32</h4>
+                                                    <div class="cbp-ntcontent">
+                                                        <ul class="cbp-ntsubaccordion">
+                                                            <li>
+                                                                <h4 class="">Freind 32</h4>
+                                                                <div class="cbp-ntcontent">
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h4 class="">Freind 32</h4>
+                                                                <div class="cbp-ntcontent">
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h4 class="">Freind 32</h4>
+                                                                <div class="cbp-ntcontent">
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h4 class="">Freind 32</h4>
+                                                                <div class="cbp-ntcontent">
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h4 class="">Freind 32</h4>
+                                                                <div class="cbp-ntcontent">
+                                                                </div>
+                                                            </li>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="">Freind 32</h4>
+                                                <div class="cbp-ntcontent">
+                                                </div>
+                                            </li>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $("#menu-toggle-2").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled-2");
+            $('#menu ul').hide();
+        });
+
+        function initMenu() {
+            $('#menu ul').hide();
+            $('#menu ul').children('.current').parent().show();
+            //$('#menu ul:first').show();
+            $('#menu li a').click(
+                function () {
+                    var checkElement = $(this).next();
+                    if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                        return false;
+                    }
+                    if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                        $('#menu ul:visible').slideUp('normal');
+                        checkElement.slideDown('normal');
+                        return false;
+                    }
+                }
+            );
+        }
+        $(document).ready(function () {
+            initMenu();
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="
+https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="
+https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <!-- <script src="
+https://cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js"></script>
+<script src="
+https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
