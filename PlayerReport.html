@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- /////////////////////////// -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
     <!-- /////////////// -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/font-awesome.min.css">
@@ -72,17 +76,17 @@
             <!-- </div> -->
             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
                 <li>
-                    <a href="Statistics.html">
+                    <a href="Statistic.html">
                         <span class="fa-stack fa-lg pull-left">
                             <img src="./assets/icons/Statistics.png" alt="">
                         </span>Statistics</a>
                 </li>
                 <li>
-                    <a href="Users.html"> <span class="fa-stack fa-lg pull-left">
+                    <a href="User.html"> <span class="fa-stack fa-lg pull-left">
                             <img src="./assets/icons/Users.png" alt=""></span>Users</a>
                 </li>
                 <li class="active">
-                    <a href="GlobalReports.html">
+                    <a href="GlobalReport.html">
                         <span class="fa-stack fa-lg pull-left">
                             <img src="./assets/icons/Global Reports.png" alt="">
                         </span>
@@ -98,10 +102,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="FileReports.html"><span class="fa-stack fa-lg pull-left">
+                    <a href="FileReport.html"><span class="fa-stack fa-lg pull-left">
                             <img src="./assets/icons/File Reports.png" alt=""></span>FileReports</a>
                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="ChargesAndWithdrawals.html"><span class="fa-stack fa-lg pull-left">
+                        <li><a href="ChargesAndWithdrawal.html"><span class="fa-stack fa-lg pull-left">
                                     <img src="./assets/icons/ChargesAndWithdrawals.png" alt=""></span>Charges And
                                 Withdrawals</a></li>
                         <li>
@@ -390,7 +394,7 @@ https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="
 https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <!-- <script src="
-https://cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js"></script>
+https://cdn.datatables.net/buttons/2.3.4/js/button.html5.min.js"></script>
 <script src="
 https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script> -->
     <script>
@@ -402,7 +406,24 @@ https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script> -->
                 ]
             });
         });
+ 
+    
+</script>
+    <script src="js/jquery.cbpNTAccordion.js"></script>
+    <script src="./assets/js/jquery.cbpNTAccordion.js"></script>
+    <script src="./assets/js/jquery.cbpNTAccordion.min.js"></script>
+    <script>
+        $(function () {
+            /*
+            - how to call the plugin:
+            $( selector ).cbpNTAccordion( [options] );
+            - destroy:
+            $( selector ).cbpNTAccordion( 'destroy' );
+            */
+
+            $('#cbp-ntaccordion').cbpNTAccordion();
+
+        });
     </script>
 </body>
-
 </html>
